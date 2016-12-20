@@ -20,6 +20,7 @@ $valores=array(	"nombres"=>"'$nombres'",
                 "fecharegistro"=>"'$fecharegistro'",
 				);
 				$paciente->actualizar($valores,$id);
+$botones=array("consulta.php?p=$id"=>"Nuevo Consulta Médica");
 				$mensaje[]="LOS DATOS DEL PACIENTE SE GUARDARON CORRECTAMENTE";
 
 

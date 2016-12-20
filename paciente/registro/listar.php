@@ -1,10 +1,8 @@
 <?php
 include_once("../../login/check.php");
-$titulo="Listado de Proveedores";
+$titulo="Listado de Pacientes";
 $folder="../../";
 
-
-$dest=array("Procesado"=>"Procesado","Directo"=>"Directo");
 include_once("../../funciones/funciones.php");
 include_once "../../cabecerahtml.php";
 ?>
@@ -20,7 +18,7 @@ include_once "../../cabecerahtml.php";
                         <td><?php campos("Nombre","nombres","text","",1,array("size"=>15));?></td>
                         <td><?php campos("Paterno","paterno","text","",1,array("size"=>15));?></td>
                         <td><?php campos("Materno","Materno","text","",1,array("size"=>15));?></td>
-                        <td><?php campos("C.I.","ci","text","",1,array("size"=>15));?></td>
+                        <td><?php campos("C.I./NHC","ci","text","",1,array("size"=>15));?></td>
                         <td><?php campos("Buscar","enviar","submit","",0,array("size"=>15));?></td>
                     </tr>
                 </table>

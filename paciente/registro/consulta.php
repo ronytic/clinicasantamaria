@@ -8,7 +8,7 @@ $paciente=new paciente;
 $pac=array_shift($paciente->mostrar($id));
 include_once("../../class/usuarios.php");
 $usuarios=new usuarios;
-$doc=todolista($usuarios->mostrarTodo("nivel=3"),"codusuarios","paterno,materno,nombres","");
+$doc=todolista($usuarios->mostrarTodo("nivel=3"),"codusuarios","paterno,materno,nombre,especialidad","");
 
 include_once '../../funciones/funciones.php';
 include_once '../../cabecerahtml.php';
@@ -19,7 +19,7 @@ include_once '../../cabecerahtml.php';
     	<div class="prefix_2 grid_4 alpha">
 			<fieldset>
 				<div class="titulo"><?php echo $titulo?></div>
-                <form action="actualizar.php" method="post" enctype="multipart/form-data">
+                <form action="guardarconsulta.php" method="post" enctype="multipart/form-data">
                 <?php campos("","id","hidden",$id);?>
 				<table class="tablareg">
 					<tr>
@@ -45,7 +45,7 @@ include_once '../../cabecerahtml.php';
                     <tr>
 						<td><?php campos("Fecha de Registro","fecharegistro","date",$pac['fecharegistro'],0,array("required"=>"required","readonly"=>"readonly"));?></td>
                         
-                        <td><?php campos("Fecha de Consulta","fechaconsulta","date",$pac['fecharegistro'],0,array("required"=>"required",));?></td>
+                        <td><?php campos("Fecha a realizar la Consulta","fechaconsulta","date",$pac['fecharegistro'],0,array("required"=>"required",));?></td>
                         <td><?php campos("Doctor para Consulta","coddoctor","select",$doc,0,array("readonly"=>"readonly","class"=>"readonly"));?></td>
 					</tr>
 					<tr><td><?php campos("Guardar","guardar","submit");?></td></tr>
