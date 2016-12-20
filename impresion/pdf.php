@@ -25,15 +25,15 @@ php_start(0);
 			$this->SetXY(45,16);
 			$this->Cell(55,4,utf8_decode($lema2),0,0,"L");
 			$this->ln(10);	
-			$this->SetXY(50,12);
+			$this->SetXY(50,40);
 			$this->Fuente("B",18);
 			$this->Cell($this->ancho-30,8,utf8_decode($titulo),0,5,"C");
 			
-			$this->ln(14);
+			$this->ln(-37);
 			$this->CuadroCabecera($this->ancho-75 ,"" ,20,"");
 			$this->CuadroCabecera(12 ,"Fecha: ",20,$fecha);
 			$this->Pagina();
-			$this->ln(5);
+			$this->ln(33);
 			if(in_array("Cabecera",get_class_methods($this))){
 				$this->Cabecera();	
 			}
