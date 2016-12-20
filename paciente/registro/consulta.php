@@ -8,7 +8,7 @@ $paciente=new paciente;
 $pac=array_shift($paciente->mostrar($id));
 include_once("../../class/usuarios.php");
 $usuarios=new usuarios;
-$doc=todolista($usuarios->mostrarTodo("nivel=3"),"codusuario","paterno,materno,nombres","");
+$doc=todolista($usuarios->mostrarTodo("nivel=3"),"codusuarios","paterno,materno,nombres","");
 
 include_once '../../funciones/funciones.php';
 include_once '../../cabecerahtml.php';

@@ -15,11 +15,13 @@ $valores=array("usuario"=>"'$usuario'",
 			"direccion"=>"'$direccion'",
 			"telefono"=>"'$telefono'",
 			"email"=>"'$email'",
-			"obs"=>"'$observacion'"
+			"obs"=>"'$observacion'",
+            "especialidad"=>"'$especialidad'",
+            "cargo"=>"'$cargo'"
 			);
 ${$narchivo}->insertar($valores);
 $codinsercion=${$narchivo}->last_id();
-$mensaje[]="EL USUARIO SE GUARDO CORRECTAMENTE";
+$mensaje[]="EL PERSONAL SE GUARDO CORRECTAMENTE";
 $titulo="Confirmación de Guardado";
 $folder="../";
 include_once '../mensajeresultado.php';

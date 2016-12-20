@@ -1,7 +1,8 @@
 <?php
 include_once '../login/check.php';
 $folder="../";
-$titulo="Modificar Usuario";
+$titulo="Modificar Datos del Personal";
+$nivelv=array("2"=>"Gerente","3"=>"Doctor","4"=>"Secretaria","5"=>"Enfermera");
 $narchivo="usuarios";
 include_once("../class/usuarios.php");
 $usuarios1=new usuarios;
@@ -34,8 +35,12 @@ include_once '../cabecerahtml.php';
                         <td><?php campos("Teléfono","telefono","text",$usu['telefono'],0,array("size"=>30));?></td>
                     </tr>
                     <tr>
+                        <td><?php campos("Especialidad","especialidad","text",$usu['especialidad'],0,array("required"=>"required","size"=>30));?></td>
+                        <td><?php campos("Cargo","cargo","text",$usu['cargo'],0,array("size"=>30));?></td>
+                    </tr>
+                    <tr>
 						<td><?php campos("Email","email","text",$usu['email'],0,array("size"=>30));?></td>
-						<td><?php campos("Nivel","nivel","select",array("2"=>"Administrador","3"=>"Inventario","4"=>"Ventas"),"","",$usu['nivel']);?></td>
+						<td><?php campos("Nivel","nivel","select",$nivelv,"","",$usu['nivel']);?></td>
 					</tr>
 					<tr>
 						<td colspan="2"><?php campos("Observación","observacion","textarea",$usu['obs'],"",array("rows"=>5,"cols"=>50,"size"=>30));?></td>

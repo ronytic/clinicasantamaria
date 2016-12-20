@@ -1,7 +1,7 @@
 <?php
 include_once '../login/check.php';
 $folder="../";
-$titulo="Nuevo Usuario";
+$titulo="Registro de Nuevo Personal";
 $nivelv=array("2"=>"Gerente","3"=>"Doctor","4"=>"Secretaria","5"=>"Enfermera");
 include_once '../funciones/funciones.php';
 include_once $folder.'cabecerahtml.php';
@@ -30,17 +30,17 @@ include_once $folder.'cabecerahtml.php';
                 <td><?php campos("Teléfono","telefono","text","",0,array("size"=>30));?></td>
             </tr>
             <tr>
-            	<td><?php campos("Dirección","especilidad","text","",0,array("required"=>"required","size"=>30));?></td>
-                <td><?php campos("Teléfono","cargo","text","",0,array("size"=>30));?></td>
+            	<td><?php campos("Especialidad","especialidad","text","",0,array("required"=>"required","size"=>30));?></td>
+                <td><?php campos("Cargo","cargo","text","",0,array("size"=>30));?></td>
             </tr>
             <tr>
                 <td><?php campos("Email","email","text","",0,array("size"=>30));?></td>
-                <td><?php campos("Nivel","nivel","select",$nivelv);?></td>
+                <td><?php campos("Nivel de Usuario","nivel","select",$nivelv);?></td>
             </tr>
             <tr>
                 <td colspan="2"><?php campos("Observación","observacion","textarea","","",array("rows"=>5,"cols"=>50,"size"=>30));?></td>
             </tr>
-            <tr><td><?php campos("Guardar Usuario","guardar","submit");?></td><td></td></tr>
+            <tr><td><?php campos("Guardar Personal","guardar","submit");?></td><td></td></tr>
         </table>
         </form>
     </fieldset>
