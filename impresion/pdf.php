@@ -9,15 +9,17 @@ php_start(0);
 		function Header(){
 			global $idioma;
 			if($this->CurOrientation=="P"){$this->ancho=$this->w-34;}else{$this->ancho=$this->w-40;}	
-			$this->SetAuthor("Sistema Desarrollado por Ronald Nina Layme. Cel: 73230568 - Soluciones Tecnológicas de Sistemas");
+			$this->SetAuthor( "Sistema Desarrollado por Ronald Nina Layme. Cel: 73230568 - Soluciones Tecnológicas de Sistemas");
 			$this->SetSubject("Sistema Desarrollado por Ronald Nina Layme. Cel: 73230568 - Soluciones Tecnológicas de Sistemas");
 			$this->SetCreator("Sistema Desarrollado por Ronald Nina Layme. Cel: 73230568 - Soluciones Tecnológicas de Sistemas");
-			$this->SetLeftMargin(18);
+			$this->SetLeftMargin(10);
 			$this->SetAutoPageBreak(true,15);
-			global $title,$lema2,$titulo,$logo,$idioma;
-			$fecha=date("d-m-Y");
+			$this->Fuente("",10);
+            /*global $title,$lema2,$titulo,$logo,$idioma;
 			
-			$this->Image(dirname(__FILE__)."/../imagenes/cabecera2pdf.jpg",10,10,195,30);
+            $fecha=date("d-m-Y");
+			
+			//$this->Image(dirname(__FILE__)."/../imagenes/cabecera2pdf.jpg",10,10,195,30);
 			$this->Fuente("",10);
 			$this->SetXY(10,35);
 			//$this->Cell(55,4,utf8_decode($title),0,0,"L");
@@ -40,7 +42,7 @@ php_start(0);
 			$this->ln();
 			
 			$this->Cell($this->ancho,0,"",1,1);
-			$this->Ln(0.1);
+			$this->Ln(0.1);*/
 		}
 		function Pagina(){
 			global $idioma;
@@ -65,13 +67,13 @@ php_start(0);
 			$this->Fuente("",$tam);
 			$this->Cell($txtAncho,5,utf8_decode($txt),$borde,0,$align,$relleno);	
 		}
-		function CuadroCuerpoMulti($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$tam=9){
-			$this->Fuente("",$tam);
-			$this->MultiCell($txtAncho,5,utf8_decode($txt),$borde,$align,$relleno);	
+		function CuadroCuerpoMulti($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$tipo="",$tam=9){
+			$this->Fuente($tipo,$tam);
+			$this->MultiCell($txtAncho,6,utf8_decode($txt),$borde,$align,$relleno);	
 		}
-		function CuadroCuerpoPersonalizado($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$tipo=""){
-			$this->Fuente($tipo);
-			$this->Cell($txtAncho,5,utf8_decode($txt),$borde,0,$align,$relleno);	
+		function CuadroCuerpoPersonalizado($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$tipo="",$tam=9){
+			$this->Fuente($tipo,$tam);
+			$this->Cell($txtAncho,6,utf8_decode($txt),$borde,0,$align,$relleno);	
 		}
 		function CuadroCuerpoResaltar($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$resaltar=2){
 			$this->Fuente("");
@@ -108,7 +110,7 @@ php_start(0);
 			$this->Ln();	
 		}
 		function Footer()
-		{	global $lema,$idioma;
+		{	/*global $lema,$idioma;
 			// Cell($this->ancho,0,"",1,1);
 			// Posición: a 1,5 cm del final
 			$this->SetY(-15);
@@ -123,7 +125,7 @@ php_start(0);
 			
 			if(in_array("Pie",get_class_methods($this))){
 				$this->Pie();	
-			}
+			}*/
 		}
 	}
 ?>

@@ -12,7 +12,7 @@ if (!empty($_POST)) {
 	$estado=$_POST['estado']==1?" and fechaconsultareal!='0000-00-00'":"and fechaconsultareal='0000-00-00'";
     //if($_POST['estado']==""){$estado="";}
     
-	$pq=$prequirurgico->mostrarTodo("fechaconsultareal LIKE '$fechaconsultareal' and coddoctor=$idusuario and codpaciente IN(SELECT codpaciente FROM paciente WHERE nombres LIKE '%$nombres%' and paterno LIKE '%$paterno%' and materno LIKE '%$materno%' and ci LIKE '$ci%')");
+	$pq=$prequirurgico->mostrarTodo("fechaconsultareal LIKE '$fechaconsultareal' and codpaciente IN(SELECT codpaciente FROM paciente WHERE nombres LIKE '%$nombres%' and paterno LIKE '%$paterno%' and materno LIKE '%$materno%' and ci LIKE '$ci%')");
     $datos=array();
     $i=0;
     foreach($pq as $p){$i++;
