@@ -12,7 +12,26 @@ $valores=array(	"codpaciente"=>"'$id'",
 				);
 
 $prequirurgico->insertar($valores);
+$codprequirugico=$prequirurgico->last_id();
 
+include_once '../../class/confirmacioncirugia.php';
+$confirmacioncirugia=new confirmacioncirugia;
+
+$valores=array(	"codpaciente"=>"'$id'",
+				"nhc"=>"'$ci'",
+				"codprequirurgico"=>"'$codprequirurgico'",
+				);
+$confirmacioncirugia->insertar($valores); 
+
+include_once '../../class/internacion.php';
+$internacion=new internacion;
+$valores=array(	"codpaciente"=>"'$id'",
+				"nhc"=>"'$ci'",
+				"codprequirurgico"=>"'$codprequirurgico'",
+				);
+$internacion->insertar($valores);  
+           
+                
 $mensaje[]="LOS CONSULTA MEDICA SE GUARDARON CORRECTAMENTE";
 
 
