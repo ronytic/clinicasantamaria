@@ -21,6 +21,8 @@ $_SESSION['subm']=0;
     	<div id="slider" class="nivoSlider">
                 <img src="imagenes/inicio/home_img1.jpg" />
                 <img src="imagenes/inicio/home_img2.jpg" />
+                <img src="imagenes/inicio/home_img3.jpg" />
+                <img src="imagenes/inicio/home_img4.jpg" />
 		</div>
         </div>
     </div>
