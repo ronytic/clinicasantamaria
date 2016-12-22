@@ -489,6 +489,13 @@ table.tablasec td.der{
 table.tablareg{
 	width:100%;
 }
+table.tablareg tr.titulo2 td{
+    font-weight:bold !important;
+    border:1px solid #C0C0C0 !important;
+}
+table.tablareg tr.subtitulo2 td{
+    border:1px solid #C0C0C0 !important;
+}
 table.tablareg tr td{
 	border-bottom:#e5e5e5 1px solid;
 	margin:5px;
