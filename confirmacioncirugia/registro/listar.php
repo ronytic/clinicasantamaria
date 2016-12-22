@@ -1,6 +1,6 @@
 <?php
 include_once("../../login/check.php");
-$titulo="Listado de Consultas Prequirugicas ya Realizadas";
+$titulo="Confirmación de Cirugía - Listado de Consultas Prequirugicas ya Realizadas";
 $folder="../../";
 
 include_once("../../funciones/funciones.php");
@@ -24,7 +24,7 @@ include_once "../../cabecerahtml.php";
                         <!--<td><?php campos("Fecha de la Consulta","fechaconsulta","date",date("Y-m-d"),1,array("size"=>15,"required"=>"required"));?></td>-->
                         <td><?php campos("Fecha de la Consulta Prequirurgica","fechaconsultareal","date",date("Y-m-d"),1,array("size"=>15,"required"=>"required"));?></td>
                             <td><?php campos("Buscar","enviar","submit","",0,array("size"=>15));?></td>
-                            <td colspan="2">Solo se lista, una ves registrado la ficha Prequirugica</td>
+                            <td colspan="2">Solo se lista una ves registrado la ficha Prequirurgica</td>
                     </tr>
                 </table>
             </form>

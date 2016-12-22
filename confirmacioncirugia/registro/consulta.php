@@ -34,7 +34,7 @@ include_once '../../cabecerahtml.php';
 				<div class="titulo"><?php echo $titulo?></div>
                 <form action="guardarconsulta.php" method="post" enctype="multipart/form-data">
                 <?php campos("","codprequirurgico","hidden",$id);?>
-                <?php campos("","id","text",$cc['codconfirmacioncirugia']);?>
+                <?php campos("","id","hidden",$cc['codconfirmacioncirugia']);?>
                 <table class="tablareg">
                     <tr class="titulo2">
                     	<td>Nombres</td>
