@@ -25,7 +25,7 @@ if($archivolistar=="" && empty($archivolistar)){
 				}
 				?>
                 <?php if(count($botones)){foreach($botones as $ba=>$bn){
-				?><a href="<?php echo $ba;?>&id=<?php echo $id;?>" class="botoninfo" target="" ><?php echo $bn?></a><?php
+				?><a href="<?php echo $ba;?>&id=<?php echo $id;?>" class="botoninfo" target="<?php echo $target;?>" ><?php echo $bn?></a><?php
 				}
 				}?>
                 <hr />
