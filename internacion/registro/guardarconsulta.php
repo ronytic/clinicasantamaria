@@ -31,8 +31,8 @@ $internacion->actualizar($valores,$id);
 $mensaje[]="SE REGISTRO LA INTERNACIÓN CORRECTAMENTE";
 $nuevo=1;
 $listar=1;
-$botones=array("listar.php?"=>"Realizar otra Internación","../general/verreporte.php?codprequirurgico=$codprequirurgico"=>"Ver Reporte Internación");
-
+//$botones=array("listar.php?"=>"Realizar otra Internación","../general/verreporte.php?codprequirurgico=$codprequirurgico"=>"Ver Reporte Internación");
+$botones=array("listar.php?"=>"Realizar otra Internación");
 $titulo="Mensaje de Respuesta";
 $folder="../../";
 include_once '../../mensajeresultado.php';
