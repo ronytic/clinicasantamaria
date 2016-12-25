@@ -12,7 +12,7 @@ $valores=array(	"codpaciente"=>"'$id'",
 				);
 
 $prequirurgico->insertar($valores);
-$codprequirugico=$prequirurgico->last_id();
+$codprequirurgico=$prequirurgico->last_id();
 
 include_once '../../class/confirmacioncirugia.php';
 $confirmacioncirugia=new confirmacioncirugia;
