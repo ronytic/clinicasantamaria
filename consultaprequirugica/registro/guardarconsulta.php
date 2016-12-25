@@ -102,8 +102,8 @@ $prequirurgico->actualizar($valores,$id);
 $mensaje[]="LOS CONSULTA PREQUIRUGICA SE GUARDO CORRECTAMENTE";
 $nuevo=1;
 $listar=1;
-$botones=array("listar.php?"=>"Revisar otra consulta Prequirugica","../general/verreporte.php?a=1"=>"Ver Reporte Prequirugico");
-
+//$botones=array("listar.php?"=>"Revisar otra consulta Prequirugica","../general/verreporte.php?a=1"=>"Ver Reporte Prequirugico");
+$botones=array("listar.php?"=>"Revisar otra consulta Prequirugica");
 $titulo="Mensaje de Respuesta";
 $folder="../../";
 include_once '../../mensajeresultado.php';
